@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS</title>
+        <mata charset="utf-8" />
+        <link rel="stylesheet" type="text/css" 
+        href="default.css"/>
+        <!-- external 외부에서 css파일을 불러와서 사용하기 -->
+
+        <style>
+            #embeded{
+                color: green;
+                font-size: 30px;
+            }
+            /* 전체 선택자 */
+            *{ }
+
+            /* 요소 선택자 */
+            b{ color: violet; }
+            div{ font-size: 10px; }
+            /* css 주석 */
+        </style>
+        <!-- html 주석-->
+    </head>
+    <body>
+        <div id="external">external 방식</div>
+        <div id="embeded">embed 방식</div>
+        <div id="inline" style="color:blue;">inline 방식</div>
+        내용
+        <b>볼드체</b>
+
+        <style>
+            /* 클래스 선택자 */
+            .c_name{ color: green; }
+            /* 아이디 선택자 */
+            #i_name{ color: purple; }
+        </style>
+        <div class="c_name">클래스 선택자</div>
+        <div class="c_name">클래스 선택자</div>
+        <div id="i_name">아이디 선택자</div>
+
+        <style>
+        /* 가상요소 선택자 */
+        #name_a:before{content: "시작";}
+        #name_a:after{content: "끝";}
+        #name_a:first-letter{font-size: 300px;}
+        #name_a::first-line{color: pink}
+        </style>
+        <div id="name_a">내용내용내용내용내용</div>
+
+        <style>
+            /* 가상클래스 선택자 */
+            .lil:first-child{ color: tomato; }
+            .lil:nth-child(2){color: aquamarine}
+            .lil:nth-child(3){color: firebrick}
+            .lil:last-child{color: skyblue;}
+            /* 1st, 2nd, 3rd, 4th ... nth*/
+            /* :link기본, :visited방문후, :hover마우스올림, :active누름, :focus집중 */
+            a:link{ color: black; text-decoration: : none;}
+            a:visited{ color: red;}
+            a:hover{color: blue; font-size: 20px;}
+            a:active{color: yellow;}
+            a:focus{color : green;}
+           
+        </style>
+        <ul> <!--parent li태그의 부모-->
+            <li class="lil">리스트1</li> <!--child ul태그의 자식-->
+            <li class="lil">리스트2</li>
+            <li class="lil">리스트3</li>
+            <li class="lil">리스트4</li>
+        </ul>
+        <a href="#">링크 버튼</a>
+
+        <style>
+            /*하위 선택자*/
+            div li{color : tomato;}
+            /*자식 선택자*/
+            div>ul>li{text-decoration: underline; }
+            /*선택자 그룹화*/
+            #i_1,#i_2,#i_3{color: violet;}
+            </style>
+        <div>
+            <ul>
+                <li>핫도그</li>
+                <li>와플</li>
+                <li>닭꼬치</li>
+            </ul>
+        </div>
+        <div id="i_1">첫번째</div>
+        <div id="i_2">두번째</div>
+        <div id="i_3">세번째</div>
+
+        <style type="text/css">
+            .cascade {color:green;}
+            #specifi {color:blue;}
+        </style>
+        <div class="cascade"> 단계적으로 적용되는 스타일 </div>
+        <div class="cascade" id="specifi"> 단계적으로 적용되는 스타일 </div>
+        <div class="cascade" id="specifi" style="color:red;"> 단계적으로 적용되는 스타일 </div>
+
+        <style>
+            #color_test{
+                color: blue;
+                color: #000; /*#rgb, 0~f(16진수)*/
+                color: #ff21aa; /*#rrggbb, 0~f(16진수)*/
+                color: rgb(0,0,225);
+                color: rgb(0,0,100%)
+            }
+        </style>
+        <div id ="color_test">color_test</div>
+        
+        <style>
+        #box_model,#inline_model{
+            border: solid 1px black;/*경계선 : 실선 1px두께 검은색;*/
+            width: 200px; /*가로*/
+            height: 200px; /*세로*/
+            /*margin 바깥 여백*/
+            margin: 100px;
+            /*padding 안쪽 여백*/
+            padding: 100px;
+            position: static; /*기본 static(정적인, 멈춘)*/
+            /*stactic 정적인, relative 관계형, absolute 절대적, fixed 고적형*/
+            left: 10px;    
+            top: 10px;
+        }
+
+        </style>
+        <div id="box_model">박스모델</div>
+        <span id="inline_model">인라인모델</span>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        
+
+        <style>
+                #font_target
+                {
+                    font-family: "TTOmniGothicT" , sans-serif;
+                    font-size: 20px;
+                    font-weight: bold;
+                    font-style: italic;
+                    font-variant: small-caps;
+                }
+            </style>
+                   폰트 교체하기 font test
+            <div id="font_target">
+                폰트 교체하기
+                <br/>
+                ABCDEFGHIJK
+            </div>
+            <style>
+                #text_target
+                {
+                    text-align: center;
+                    /* left right center*/
+                    width: 300px;
+                    vertical-align: top; /*상하정렬*/
+                    text-decoration: underline;
+    
+                }
+            </style>
+            <div id="text_target">
+                글 정렬 방식
+            </div>
+            <style>
+                #line_target
+                {
+                    letter-spacing: 20px; /* 글자 간격 */
+                    line-height: 20px; /* 줄 간격 */
+                    text-indent: 20px; /* 들여쓰기 */
+                    text-transform: uppercase; /* 대소문자 변경 */
+                    /* UPPERCASE lowercase Capitalize */
+                    white-space: pre;
+    
+                }
+            </style>
+            <div id="line_target">
+                내용내용내용내용내용내용내용내용내용
+                내용내용내용내용내용내용내용내용내용
+                내용내용내용내용내용내용내용내용내용
+                내용내용내용내용내용내용내용내용내용
+                내용내용내용내용내용내용내용내용내용
+                ABCDEFGHIJK abcde
+
+                <table id="table_target">
+                        <tr>
+                            <td id="vartical_baseline">top</td>
+                            <td id="vartical_top">top</td>
+                            <td id="vartical_text_top">text_top</td>
+                            <td id="vartical_middle">middle</td>
+                            <td id="vertical_bottom">bottom</td>
+                            <td id="vertical_text_bottom">text_bottom</td>
+                        </tr>
+                    </table>
+
+                <style>
+                    @import url('https://fonts.googleapis.com/css?family=Arimo&display=swap');
+                    #google_font{
+                        font-family: 'sunflower', sans-serif;
+                    }
+                </style>
+                google font 구글폰트
+                <div id="google_font"> google font 구글폰트 </div>
+
+    
+    </body>
+</html>

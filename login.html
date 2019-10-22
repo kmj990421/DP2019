@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>영화 : 드래곤길들이기</title>
+        <meta charset="utf-8" />
+        
+        
+
+    </head>
+    <style>
+        body
+        {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <body>
+        <style>
+            .gnb
+                        {
+                                position: fixed;
+                                width: 100%;
+                                height: 100px;
+                                background-color: black;
+                                z-index: 999;
+                                margin: -9px;
+                                border-bottom: 1px solid white;
+                        }
+                        ul {
+			background-color: black;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+            overflow: hidden;
+        }
+        
+        span img{
+            padding-top: 100px;
+        }
+
+		li { float: left; }
+		li a {
+			display: block;
+			background-color: black;
+			color: white;
+			padding: 8px;
+			text-decoration: none;
+			text-align: center;
+			font-weight: bold;
+		}
+		li a.current {
+			background-color: darkred;
+			color: white;
+		}
+		li a:hover:not(.current) {
+			background-color: white;
+			color: black;
+        }
+        
+        input {
+			width: 18%;
+			padding: 10px 20px;
+			margin: 3px 0;
+			box-sizing: border-box;
+        }
+        
+        button {
+            width: 18%;
+            padding: 10px 20px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            background-color: darkred;
+            color: white;
+        }
+        </style>
+        <div style="text-align :center;">
+                <div class="gnb">
+                <img src="./images/bb11.png"/>
+            <ul>
+                    <li><a href="test_1.html/#section1" target="_top">Main</a></li>
+                    <li><a href="#section2" target="_top">Prolog</a></li>
+                    <li><a href="#section3">Introduce</a></li>
+                    <li><a href="#section4">Character</a></li>
+                    <li><a href="#section5">Plot</a></li>
+                    <li><a href="#section6">Best</a></li>
+                    <li><a href="#section7">Review</a></li>
+                    <ul style="float:right; list-style-type:none;">
+                        <li><a href="login.html">Log in</a></li>
+                        <li><a href="signup.html">Sign up</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <form>
+                    ID <br />
+                    <input type="text" name="username"/><br />
+                    PASSWORD <br />
+                    <input type="password" name="password"/>
+            </form>
+            <button type="button" onclick="window.location.href='test_1.html'">LOGIN</button>
+        </div>
+    </body>
+</html>
+
+            
