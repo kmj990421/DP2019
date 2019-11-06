@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html>
     <head>
-     <title>layout</title>
-     <meta charset="utf-8" />
-     <style>
+    <title>layout</title>
+    <meta charset="utf-8" />
+    <style>
          
-         header, div, nav, footer, ul, li, h1, h2, h3{
+        header, div, nav, footer, ul, li, h1, h2, h3{
             /* border: solid 1px black;*/ /* 경계선 긋기 */
-             /* margin: 10px; /* /*서로간에 여유 공간 만들기 */
-         }
-         header>ul>li{
-             float: left;  /* 둥둥떠다니기 : 왼쪽기준 */
-             list-style: none; /* 목록-모습(동그라미): 없음 */
-             padding-left: 10px; /* 내부여백-왼쪽 : 10px */
-             padding-right: 10px; /* 내부여백-오른쪽 : 10px */
-             border-right: solid 1px gray;
-             /* 경계선-오른쪽: 실선 1px두께 회색 */
-         }
-         header>ul>li:nth-child(5){
-             border: none; /* 경계선: 없음 */
-         }
-         header>ul{
-             margin: 11px;
-         }
-         #zoom{
-             margin: 10px;
-         }
-         header>h1{
-             margin: 0px;
-         }
+            /* margin: 10px; /* /*서로간에 여유 공간 만들기 */
+        }
+        header{
+            padding: 10px 50px;
+        }
+        header>ul>li{
+            float: left;  /* 둥둥떠다니기 : 왼쪽기준 */
+            list-style: none; /* 목록-모습(동그라미): 없음 */
+            padding-left: 10px; /* 내부여백-왼쪽 : 10px */
+            padding-right: 10px; /* 내부여백-오른쪽 : 10px */
+            border-right: solid 1px gray;
+            /* 경계선-오른쪽: 실선 1px두께 회색 */
+        }
+        header>ul>li:nth-child(5){
+            border: none; /* 경계선: 없음 */
+        }
+        header>ul{
+            margin: 11px;
+        }
+        #zoom{
+            margin: 10px;
+        }
+        header>h1{
+            margin: 0px;
+        }
         
-         .clear{
-             clear: both; /* 지우다: 양쪽 */
-             height: 0px; /* 높이 */
-             overflow: hidden; /* 넘쳤을 때: 숨김 */
-         }
-         .float_left{
-             float: left;
-         }
-         .float_right{
-             float: right;
-         }
-         nav li{
-             float: left;
-             list-style: none;
-             padding-left: 10px;
-             padding-right: 10px;
+        .clear{
+            clear: both; /* 지우다: 양쪽 */
+            height: 0px; /* 높이 */
+            overflow: hidden; /* 넘쳤을 때: 숨김 */
+        }
+        .float_left{
+            float: left;
+        }
+        .float_right{
+            float: right;
+        }
+        nav li{
+            float: left;
+            list-style: none;
+            padding-left: 10px;
+            padding-right: 10px;
         }
         nav>h2{
             margin: 0px;
@@ -55,6 +58,7 @@
         }
         nav{
             background-color: #ddd;
+            padding: 10px 50px;
         }
         #content>div:nth-child(1){
             background-color: #98f;
@@ -90,6 +94,52 @@
             margin-left: 180px; /* 고정값 */
             margin-left: auto; /* 가변값 */
             margin-right: auto;
+
+            padding: 50px 0px; /* 상하 좌우 */
+        }
+        footer
+        {
+            background-color: #555;
+            color: #ccc;
+
+            padding: 10px 50px;
+        }
+        footer>div>ul>li{
+            float: left;
+            list-style: none;
+            padding: 0px 10px; /* 상하 좌우 */
+
+            border-right: solid 2px gray;
+        }
+        footer>div>ul>li:nth-child(6){
+            border: none;
+        }
+        footer>div>ul{
+            padding:0px;
+        }
+        footer>ul>li{
+            float: left;
+            list-style: none;
+            padding: 0px 10px; /* 상하 좌우 */
+        }
+        footer>ul{
+            padding: 0px;
+        }
+        #footer_left{
+            float: left;
+        }
+        #footer_right{
+            float: right;
+        }
+        #wrap{
+            /* wodth: 1200px; */ /* 고정값 */
+            min-width: 1100px; /* 최소넓이 */
+            max-width: 1920px; /* 최대넓이 */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        body{
+            margin: 0px;
         }
      </style>
     </head>
@@ -232,7 +282,35 @@
                         <div class="clear"></div> <!-- float left 해제 -->
                     </section>
                 </div>
+                </div>
+                <footer>
+                    <div id="footer_left">
+                        <ul>
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Services</li>
+                            <li>Work</li>
+                            <li>Blog</li>
+                            <li>Contact us</li>
+                            <div class="clear"></div> <!-- float left 해제 -->
+                        </ul>
+                        <div>ⓒ 2013 BlueBox. All Right Reserved.</div>
+                        <div>
+                            The loges in the design are the property
+                            of their respective owners/copyright
+                            holders.
+                        </div>
+                    </div>
+                    <ul id="footer_right"> <!-- 오른편 상자 역할 -->
+                        <li><img src="images/layout1_footer_icon1.png"/></li>
+                        <li><img src="images/layout1_footer_icon2.png"/></li>
+                        <li><img src="images/layout1_footer_icon3.png"/></li>
+                        <li><img src="images/layout1_footer_icon4.png"/></li>
+                        <li><img src="images/layout1_footer_icon5.png"/></li>
+                        <li><img src="images/layout1_footer_icon6.png"/></li>
+                        <div class="clear"></div> <!-- float left 해제 -->
+                    </ul>
+                    <div class="clear"></div> <!-- float left 해제 -->
+                </footer>
             </div>
-            <footer>footer</footer>
-        </div>
-    </body>
+        </body>
